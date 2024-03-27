@@ -1,0 +1,19 @@
+.navbar{
+    @apply fixed w-full z-20 top-0 left-0  py-4  px-2   duration-300 grid place-items-center;
+}
+
+
+.item-navbar::after{
+content: '';
+width: 0;
+height: 1.2px;
+background-color: #F3B74B;
+display: block;
+transition: all 1s ease;
+}
+.item-navbar:hover::after{
+width: 100%;
+}
+.item-navbar:hover{
+    color: #F3B74B;
+    }

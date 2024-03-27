@@ -1,0 +1,20 @@
+[
+    {
+        "idDocumentType": 1,
+        "idGestor": 0,
+        "idIAS": 1,
+        "nombre": "DNI"
+    },
+    {
+        "idDocumentType": 2,
+        "idGestor": 1,
+        "idIAS": 2,
+        "nombre": "Carnet de Extranjería"
+    },
+    {
+        "idDocumentType": 3,
+        "idGestor": 3,
+        "idIAS": 3,
+        "nombre": "Cédula de Identidad"
+    }
+]
