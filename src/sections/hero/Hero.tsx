@@ -4,9 +4,8 @@ import { useCasinoStore } from "../../store/casinoStore";
 import { LinksNavbar } from "../header/models";
 import { Button } from "../../common/components";
 // import imageBg from "../../assets/hero/bg3.webp";
-import imageBgMobile from "../../assets/hero/GANACASH - WM MARZO-02 (1) 3.png";
-
-import imgBack from '../../assets/hero/le.jpg'
+import imageBackgroundDesktop from '../../assets/hero/banner_desktop.webp'
+import imageBackgroundMobile from "../../assets/hero/banner_mobile.webp";
 
 interface HeroProps {}
 
@@ -15,11 +14,11 @@ const Hero: FC<HeroProps> = ({}) => {
   return (
     <section className="relative h-fit max-h-[100vh] bg-[#1a1a1a]" id={`${LinksNavbar.Home}`}>
       <img
-        src={imgBack}
+        src={imageBackgroundDesktop}
         alt=""
         className="w-full  top-0 z-0 max-h-[100vh]  object-cover hidden md:block object-left-top aspect-video "
       />
-      <img src={imageBgMobile} alt="" className="object-top w-full  z-0  block md:hidden aspect-auto object-cover" />
+      <img src={imageBackgroundMobile} alt="" className="object-top w-full  z-0  block md:hidden aspect-auto object-cover" />
       <div className="relative md:absolute md:top-0 py-10 md:py-0  w-full h-full grid place-items-center bg-white md:bg-transparent">
         <div className="max-w-screen-2xl h-full w-full ">
           <div className="flex w-full h-full flex-row-reverse">
