@@ -13,7 +13,7 @@ export const ButtonMenu: FC<ButtonMenuProps> = () => {
       onClick={setShowMenu}
       data-collapse-toggle="navbar-sticky"
       type="button"
-      className="inline-flex items-center p-2 w-11  h-11 justify-center  lg:hidden  z-30  "
+      className="inline-flex items-center p-2 w-11  h-11 justify-center  xl:hidden  z-30  "
       aria-controls="navbar-sticky"
       aria-expanded="false"
     >

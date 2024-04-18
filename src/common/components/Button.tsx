@@ -11,14 +11,14 @@ interface ButtonProps {
 export const Button: FC<ButtonProps> = ({ type, href, onClick, name }) => {
   if (type === 'link' && href) {
     return (
-      <a href={href} onClick={onClick} className='bg-metal w-fit animation'>
+      <a href={href} onClick={onClick} className='bg-gradient-to-b from-[#EE7A00] to-[#FFBD77] rounded-full py-3 px-6 text-[#2E2E2E] animation2'>
        {name}
       </a>
     );
   }
 
   return (
-    <button onClick={onClick} className='bg-metal w-fit '>
+    <button onClick={onClick} className='bg-gradient-to-b from-[#EE7A00] to-[#FFBD77] rounded-full py-3 px-6 text-[#2E2E2E] '>
              {name}
     </button>
   );

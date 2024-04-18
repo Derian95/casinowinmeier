@@ -379,7 +379,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
         type="submit"
         className={` ${
           postData ? "brightness-75 " : ""
-        } bg-metal py-4 px-8 font-bold text-base`}
+        } bg-gradient-to-b from-[#EE7A00] to-[#FFBD77] rounded-full py-3 px-6 text-white text-base  duration-250 hover:-translate-y-1`}
       >
         {postData ? "Enviando..." : "Enviar registro"}
       </button>

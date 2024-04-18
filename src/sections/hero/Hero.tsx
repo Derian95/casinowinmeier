@@ -4,30 +4,37 @@ import { useCasinoStore } from "../../store/casinoStore";
 import { LinksNavbar } from "../header/models";
 import { Button } from "../../common/components";
 // import imageBg from "../../assets/hero/bg3.webp";
-import imageBackgroundDesktop from '../../assets/hero/banner_desktop.webp'
-import imageBackgroundMobile from "../../assets/hero/banner_mobile.webp";
-
+import imgUrl from '../../assets/hero/Frame 2 (1).svg'
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
   const { dataCasino } = useCasinoStore();
   return (
-    <section className="relative h-fit max-h-[100vh] bg-[#1a1a1a]" id={`${LinksNavbar.Home}`}>
-      <img
+    <section style={{backgroundImage:`url("${imgUrl}")`, backgroundSize:'cover',backgroundRepeat:'no-repeat'}} className=" bg-[#2E2E2E] relative h-screen min-h-[900px] max-h-[100vh] grid place-items-center" id={`${LinksNavbar.Home}`} >
+      {/* <img
         src={imageBackgroundDesktop}
         alt=""
         className="w-full  top-0 z-0 max-h-[100vh]  object-cover hidden md:block object-left-top aspect-video "
-      />
-      <img src={imageBackgroundMobile} alt="" className="object-top w-full  z-0  block md:hidden aspect-auto object-cover" />
-      <div className="relative md:absolute md:top-0 py-10 md:py-0  w-full h-full grid place-items-center bg-white md:bg-transparent">
-        <div className="max-w-screen-2xl h-full w-full ">
-          <div className="flex w-full h-full flex-row-reverse">
-            <div className="w-full md:w-2/4 flex flex-col items-center justify-center gap-10 ">
-              <Title message={dataCasino?.sections.home.title!} />
+      /> */}
+      {/* <img src={imageBackgroundMobile} alt="" className="object-top w-full  z-0  block md:hidden aspect-auto object-cover" /> */}
+
+      <div className="relative md:absolute md:top-0 md:py-0  w-full h-full grid place-items-center bg-white md:bg-transparent max-w-screen-2xl">
+      <div className=" h-full w-full ">
+          <div className="flex w-full h-full flex-col xl:flex-row bg-[#2E2E2E]  xl:bg-transparent gap-10 px-5">
+            <div className="w-full xl:w-2/4 flex flex-col xl:items-start items-center justify-center gap-10 pt-28 xl:pt-0">
+              <Title message={""}  />
+              {/* <div className="w-52 h-10 bg-gradient-to-b from-[#EE7A00] to-[#FFBD77] rounded-full"></div> */}
               <Button
                 type={"link"}
                 href={`#${LinksNavbar.Register}`}
                 name="Regístrate aquí y gana"
+              />
+            </div>
+            <div className="w-full xl:w-2/4  grid place-items-center animation-hero pb-10">
+              <img
+                src={dataCasino?.sections.home.imagePathWeb}
+                alt=""
+                className="w-full h-full object-contain sm:w-8/12 md:w-7/12 lg:w-5/12  xl:w-11/12 "
               />
             </div>
           </div>

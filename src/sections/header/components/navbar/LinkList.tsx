@@ -13,7 +13,7 @@ export const LinkList: FC<LinkListProps> = () => {
   return (
     <div
       id="navbar-sticky"
-      className={` hidden lg:block  items-center justify-between w-full  lg:w-auto `}
+      className={` hidden xl:block  items-center justify-between w-full  lg:w-auto `}
       aria-controls="navbar-sticky"
     >
       <ul className="flex    gap-2">
