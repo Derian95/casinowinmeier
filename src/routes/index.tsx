@@ -14,7 +14,7 @@ export const route = createBrowserRouter([
     ],
   },
   {
-    path: "terminos",
+    path: "catalogo",
     element: <Options />,
   },
 ]);

@@ -40,6 +40,7 @@ export interface Sections {
   clubNews: ClubNews
   promotionalAd: PromotionalAd
   footer: Footer
+  catalogue: Home
 }
 
 export interface Home {

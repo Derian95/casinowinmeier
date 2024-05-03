@@ -13,7 +13,7 @@ const dataBenefits=[
     {
        id:              1,
        image:           image1,
-       description:     '¡Es muy sencillo! Solo debes registrarte y recibir tu tarjeta de Socio.'
+       description:     '¡ Solo debes afiliarte y recibir tu tarjeta de Socio.'
     },
     {
         id:              2,

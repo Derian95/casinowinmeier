@@ -18,6 +18,10 @@ export const routesPage =[
         link:LinksNavbar.Club
     },
     {
+        name:'Catálogo',
+        link:LinksNavbar.Catalogo
+    },
+    {
         name:'Promociones',
         link:LinksNavbar.Promotions
     },

@@ -4,7 +4,7 @@ import { useCasinoStore } from "../../store/casinoStore";
 import { LinksNavbar } from "../header/models";
 import { Button } from "../../common/components";
 // import imageBg from "../../assets/hero/bg3.webp";
-import imgUrl from '../../assets/hero/Frame 2 (1).svg'
+import imgUrl from '../../assets/hero/newBgWM.svg'
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
@@ -23,6 +23,7 @@ const Hero: FC<HeroProps> = ({}) => {
           <div className="flex w-full h-full flex-col xl:flex-row bg-[#2E2E2E]  xl:bg-transparent gap-10 px-5">
             <div className="w-full xl:w-2/4 flex flex-col xl:items-start items-center justify-center gap-10 pt-28 xl:pt-0">
               <Title message={""}  />
+              <p className="text-white text-sm">*Válido solo para nuevos socios de WM Club.</p>
               {/* <div className="w-52 h-10 bg-gradient-to-b from-[#EE7A00] to-[#FFBD77] rounded-full"></div> */}
               <Button
                 type={"link"}

@@ -51,6 +51,7 @@ html{
 }
 
 
+/* from-[#FF5500] to-[#ff8a4f] */
 
 .bg-metal{
   padding: 10px 20px;
@@ -58,19 +59,20 @@ html{
     border-radius:5px;
         background: linear-gradient(
             to top,
-            #af8e23 0,
-            #fdf5ac 22%,
-            #fded9e 45%,
-            #fae0aa 50%,
-            #ffec8e 55%,
-            #f3da6c 78%,
-            #b39659 100%
+            #da791f 0,
+            #fdccac 22%,
+            #fdc99e 45%,
+            #f8b29c 50%,
+            #ffc18e 55%,
+            #f39d6c 78%,
+            #e49561 100%
         );
       transition: all .5s ease;
     }
     .bg-metal:hover{
     box-shadow: 1px 4px 30px #fddf46 ;
     }
+
 
 .animation{
   animation: alternate 3s  btn-animation infinite ;
@@ -115,13 +117,13 @@ box-shadow: 0px 5px 60px #EE7A00 ;
   margin: -8px 0 0 -8px;
   width: 16px;
   aspect-ratio: 1;
-  background: #F3B74B;
+  background: #EE7A00;
   animation:
     l2-1 2s  infinite,
     l2-2 1s infinite ;
 }
 .loader:after {
-  background:#000;
+  background:#363636;
   animation-delay: -1s,0s;
 }
 @keyframes l2-1 {
@@ -150,4 +152,63 @@ box-shadow: 0px 5px 60px #EE7A00 ;
   50% {
     transform: translateY(0px);/* En la mitad de la animación, sube */
   }
+}
+
+
+
+
+
+
+
+
+.Example input,
+.Example button {
+  font: inherit;
+}
+
+.Example header {
+  background-color: #323639;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+}
+
+.Example header h1 {
+  font-size: inherit;
+  margin: 0;
+}
+
+.Example__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.Example__container__load {
+  margin-top: 1em;
+  color: white;
+}
+
+.Example__container__document {
+  width: 100%;
+  max-width: calc(100% - 2em);
+  margin: 1em 0;
+}
+
+.Example__container__document .react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Example__container__document .react-pdf__Page {
+  margin: 1em 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.Example__container__document .react-pdf__message {
+  padding: 20px;
+  color: white;
 }

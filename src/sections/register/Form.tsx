@@ -25,7 +25,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
     useLocationData();
   const { minDate } = useMinDate();
   const {
-    postData,
+    // postData,
     sendRegister,
     control,
     errors,
@@ -374,15 +374,15 @@ export const FormRegister: FC<FormRegisterProps> = () => {
         </label>
       </div>
 
-      <button
+      {/* <button
         disabled={postData}
         type="submit"
         className={` ${
           postData ? "brightness-75 " : ""
-        } bg-gradient-to-b from-[#EE7A00] to-[#FFBD77] rounded-full py-3 px-6 text-white text-base  duration-250 hover:-translate-y-1`}
+        } bg-gradient-to-b from-[#FF5500] to-[#ff8a4f] rounded-full py-3 px-6 text-white text-base  duration-250 hover:-translate-y-1`}
       >
         {postData ? "Enviando..." : "Enviar registro"}
-      </button>
+      </button> */}
       <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
       <ModalSuccess />
     </form>

@@ -7,3 +7,9 @@ export enum UrlApiIAS{
     development = 'http://192.168.1.32/IAS/',
     producction = 'https://grupogladcon.com/ias'
 }
+
+
+export enum UrlMambosPlayerTraking{
+    development = 'http://192.168.1.32:4006',
+    producction = ''
+}
