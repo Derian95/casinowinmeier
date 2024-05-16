@@ -15,12 +15,15 @@ const Register: FC<RegisterProps> = ({}) => {
         </div>
         <div className="w-full lg:w-5/12 bg-[#3b3b3b] p-2 lg:p-10  rounded-xl flex flex-col justify-between">
           <div>
-            <h4 className="text-xl sm:text-2xl lg:text-4xl mb-2 font-semibold text-white">
-              ¡Compra s/50 y juega s/100 en bonos con WM Club!
-            </h4>
-            <span className="text-[#c2c2c2] text-sm">
-              Válido solo para nuevos socios de WM Club
-            </span>
+          <h1 className="text-3xl sm:text-4xl    w-full  text-center   max-w-96 sm:max-w-full text-white drop-shadow-2xl">
+            {/* ¡Compra s/50 */}
+            <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold my-2"> ¡Bienvenido a Ganar!</p><p className="font-normal mt-2 max-w-[500px]  m-auto xl:m-0 text-center">Compra S/50 y juega S/100 en bonos con WM Club.</p></h1>
+          <h1 className="text-3xl sm:text-5xl    w-full  text-center   max-w-96 sm:max-w-full text-white drop-shadow-2xl font-bold">
+     
+        {/* Bienvenido  a <br />Ganar */}
+
+          </h1>
+          <span className="text-[#c2c2c2] text-sm text-center m-auto w-full block">Válido solo para nuevos socios de WM Club</span>
           </div>
 
           <div className="flex justify-end">

@@ -4,7 +4,7 @@ export enum UrlApi{
 }
 
 export enum UrlApiIAS{
-    development = 'http://192.168.1.32/IAS/',
+    development = 'http://192.168.1.112/IAS/',
     producction = 'https://grupogladcon.com/ias'
 }
 

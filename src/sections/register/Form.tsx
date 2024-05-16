@@ -25,7 +25,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
     useLocationData();
   const { minDate } = useMinDate();
   const {
-    // postData,
+    postData,
     sendRegister,
     control,
     errors,
@@ -38,7 +38,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
     terms,
     getInstance,
   } = useRegister();
-  const { setModalPolitics, setModalTerms } = useUiGlobalStore();
+  const { setModalPolitics } = useUiGlobalStore();
   const { mappedCountries } = useCountrys();
   const { mappedCountriesCodes } = useCountryCode();
 
@@ -63,7 +63,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
     >
       <div className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
         <input type="text" value={token} hidden {...register("provenance")} />
-        <input type="text" value={CodeHallManager.producction} hidden {...register("idCasino")} />
+        <input type="text" value={CodeHallManager.development} hidden {...register("idCasino")} />
         <Input
           {...register("name", { required: true })}
           classNames={{inputWrapper: "border-default-700 border-1 ",label: "z-10 font-semibold", }}
@@ -73,7 +73,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           isInvalid={errors.name?.type === "required"}
           errorMessage={errors.name?.type === "required" && "El nombre es requerido"}
           labelPlacement="outside"
-          placeholder="Ingrese sus nombres"
+          placeholder="Ingresa tus nombres"
           autoComplete="none"
         />
 
@@ -86,7 +86,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           isInvalid={errors.firstName?.type === "required"}
           errorMessage={ errors.firstName?.type === "required" && "El apellido paterno es requerido"}
           labelPlacement="outside"
-          placeholder="Ingrese su apellido paterno"
+          placeholder="Ingresa tu apellido paterno"
           autoComplete="none"
         />
         <Input
@@ -98,7 +98,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           isInvalid={errors.lastName?.type === "required"}
           errorMessage={ errors.lastName?.type === "required" && "El apellido materno es requerido"}
           labelPlacement="outside"
-          placeholder="Ingrese su apellido materno"
+          placeholder="Ingresa tu apellido materno"
           autoComplete="none"
         />
 
@@ -136,7 +136,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           isInvalid={errors.documentNumber?.type === "required"}
           errorMessage={errors.documentNumber?.type === "required" &&"El documento es requerido"}
           labelPlacement="outside"
-          placeholder="Ingrese su número de documento"
+          placeholder="Ingresa tu número de documento"
           autoComplete="none"
         />
 
@@ -213,7 +213,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
 
         <NextSelect
           label="Departamento"
-          placeholder="Elija un Departamento"
+          placeholder="Elige un departamento"
           labelPlacement="outside"
           variant="bordered"
           radius="sm"
@@ -238,7 +238,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           radius="sm"
           classNames={{ trigger: "border-default-700 border-1", label: "z-0 font-semibold" }}
           isDisabled={provinces.length == 0}
-          placeholder="Elija una provincia"
+          placeholder="Elige una provincia"
           onChange={(e) => getDistricts(e.target.value)}
         >
           {provinces.map((province) => (
@@ -255,7 +255,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           radius="sm"
           classNames={{ trigger: "border-default-700 border-1", label: "z-0 font-semibold" }}
           isDisabled={districts.length == 0}
-          placeholder="Elija una provincia"
+          placeholder="Elige un distrito"
           {...register("idDistrict")}
         >
           {districts.map((district) => (
@@ -312,15 +312,20 @@ export const FormRegister: FC<FormRegisterProps> = () => {
         </div>
 
         <Input
-          {...register("email")}
+            {...register("email", {
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Entered value does not match email format",
+              },
+            })}
           classNames={{inputWrapper: "border-default-700 border-1  ",label: "z-0 font-semibold",}}
           variant="bordered"
           label="Correo electrónico"
           radius="sm"
-          isInvalid={errors.email?.type === "required"}
-          errorMessage={errors.email?.type === "required" && "El correo es requerido"}
+          isInvalid={errors.email?.type==="pattern"}
+          errorMessage={errors.email?.type==="pattern"&& "Debe ser un correo válido"}
           labelPlacement="outside"
-          placeholder="Ingrese su correo electrónico"
+          placeholder="Ingresa tu correo electrónico"
           autoComplete="none"
         />
       </div>
@@ -340,22 +345,13 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           className="w-4 h-4 "
         />
         <label className="ml-2 text-sm font-medium text-black">
-          Tengo más de 18 años, acepto los{" "}
+         Tengo más de 18 años, acepto los {" "}
           <span
             className="underline uppercase cursor-pointer text-xs "
-            onClick={setModalTerms}
-          >
-            términos y condiciones
-          </span>{" "}
-          y
-          <span
-            className="underline uppercase cursor-pointer text-xs text-black"
             onClick={setModalPolitics}
           >
-            {" "}
-            políticas de privacidad
+            TÉRMINOS & CONDICIONES y las POLÍTICAS DE PRIVACIDAD.
           </span>
-          .
         </label>
       </div>
 
@@ -366,15 +362,13 @@ export const FormRegister: FC<FormRegisterProps> = () => {
           id="remember"
           type="checkbox"
           value=""
-          className="w-4 h-4 "
+          className="min-w-4 h-4 "
         />
         <label className="ml-2 text-sm font-medium ">
-          Autorizo el tratamiento de mis datos para fines de promoción comercial
-          por parte de Casinos del Norte S.A.C.
+        Autorizo el tratamiento de mis datos para fines de promoción comercial.
         </label>
       </div>
-
-      {/* <button
+ <button
         disabled={postData}
         type="submit"
         className={` ${
@@ -382,7 +376,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
         } bg-gradient-to-b from-[#FF5500] to-[#ff8a4f] rounded-full py-3 px-6 text-white text-base  duration-250 hover:-translate-y-1`}
       >
         {postData ? "Enviando..." : "Enviar registro"}
-      </button> */}
+      </button>
       <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
       <ModalSuccess />
     </form>

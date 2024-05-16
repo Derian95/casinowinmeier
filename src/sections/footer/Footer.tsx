@@ -28,17 +28,17 @@ const Footer: FC<FooterProps> = ({}) => {
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
                   <p className="hover:underline hover:cursor-pointer" onClick={setModalKeops}>
-                    Términos y condiciones de la promoción
+                  T&C de la promoción "Bienvenido a Ganar" 
                   </p>
                 </li>
                 <li className="mb-4">
                   <p className="hover:underline hover:cursor-pointer" onClick={setModalTerms}>
-                    Términos y condiciones WM Club
+                  T&C WM Club
                   </p>
                 </li>
                 <li className="mb-4">
                   <p className="hover:underline hover:cursor-pointer" onClick={setModalPolitics}>
-                    Políticas de Privacidad WM Club
+                  Políticas de Privacidad WM Club
                   </p>
                 </li>
               </ul>

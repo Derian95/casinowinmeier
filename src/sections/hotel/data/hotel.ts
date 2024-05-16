@@ -6,15 +6,15 @@ import restobar from '../../../assets/hotel/blu-bar WM.jpg'
 export const infohotel=[
     {
         image:hotel,
-        description:'Comodidad asegurada en nuestro hotel'
+        description:' Comodidad asegurada en nuestro hotel 4 estrellas'
     },
    
     {
         image:image,
-        description:'Deliciosas cenas en nuestro restaurante Ventura'
+        description:'Deliciosas cenas en nuestro restaurante'
     },
     {
         image:restobar,
-        description:'Exquisitas bebidas en nuestro Blue-Bar'
+        description:'Exquisitos cocteles y piqueos en Blu Bar'
     }
 ]

@@ -13,7 +13,7 @@ const dataBenefits=[
     {
        id:              1,
        image:           image1,
-       description:     '¡ Solo debes afiliarte y recibir tu tarjeta de Socio.'
+       description:     '¡Solo debes afiliarte y recibirás tu tarjeta de Socio completamente GRATIS!'
     },
     {
         id:              2,

@@ -2,7 +2,7 @@
 
 import { casinoApi, casinoApiWeb } from "../../../api/apiCasino";
 import { iasApi } from "../../../api/apiIAS";
-import { ClientVerify, ClientVerifyResponse, Department, DepartmentResponse, District, DistrictResponse, GenerateCode, Province, ProvinceResponse, RegisterData, RegisterIas, RegisterIasResponse, ResponseRegisterData } from "../models";
+import { CampaignVerifyResponse, ClientVerify, ClientVerifyResponse, Department, DepartmentResponse, District, DistrictResponse, GenerateCode, Province, ProvinceResponse, RegisterData, RegisterIas, RegisterIasResponse, ResponseRegisterData } from "../models";
 
 
 export const fetchDepartments = async (): Promise<Department[]> => {
@@ -55,7 +55,7 @@ export const registerNewUserIas = async (newUserIAS : RegisterIas):Promise<Regis
     return dataRegisterIas.data
   } catch (error) {
     throw error;
-  }
+  } 
 }
 
 export const verifyClient = async (verifyData : ClientVerify):Promise<ClientVerifyResponse> =>{
@@ -70,6 +70,20 @@ export const verifyClient = async (verifyData : ClientVerify):Promise<ClientVeri
 export const generateCode = async (data : GenerateCode):Promise<ClientVerifyResponse> =>{
   try {
     const dataRegisterIas = await iasApi.post<ClientVerifyResponse>('/CampaniaCliente/GenerarCodigoCliente',data)
+    return dataRegisterIas.data
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+
+export const verifycampaign = async (codSala:number):Promise<CampaignVerifyResponse> =>{
+  try {
+    const data={
+      codSala : codSala
+    }
+    const dataRegisterIas = await iasApi.post<CampaignVerifyResponse>('/CampaniaCliente/ExisteCampaña',data)
     return dataRegisterIas.data
   } catch (error) {
     throw error;

@@ -5,6 +5,7 @@ import { LinksNavbar } from "../header/models";
 import { Button } from "../../common/components";
 // import imageBg from "../../assets/hero/bg3.webp";
 import imgUrl from '../../assets/hero/newBgWM.svg'
+// import video from '../../assets/hero/video.mp4'
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
@@ -18,7 +19,7 @@ const Hero: FC<HeroProps> = ({}) => {
       /> */}
       {/* <img src={imageBackgroundMobile} alt="" className="object-top w-full  z-0  block md:hidden aspect-auto object-cover" /> */}
 
-      <div className="relative md:absolute md:top-0 md:py-0  w-full h-full grid place-items-center bg-white md:bg-transparent max-w-screen-2xl">
+      <div className="relative  md:top-0 md:py-0  w-full h-full grid place-items-center bg-white md:bg-transparent max-w-screen-2xl">
       <div className=" h-full w-full ">
           <div className="flex w-full h-full flex-col xl:flex-row bg-[#2E2E2E]  xl:bg-transparent gap-10 px-5">
             <div className="w-full xl:w-2/4 flex flex-col xl:items-start items-center justify-center gap-10 pt-28 xl:pt-0">
@@ -32,11 +33,12 @@ const Hero: FC<HeroProps> = ({}) => {
               />
             </div>
             <div className="w-full xl:w-2/4  grid place-items-center animation-hero pb-10">
-              <img
+              {/* <img
                 src={dataCasino?.sections.home.imagePathWeb}
                 alt=""
                 className="w-full h-full object-contain sm:w-8/12 md:w-7/12 lg:w-5/12  xl:w-11/12 "
-              />
+              /> */}
+              <video src={dataCasino?.generalData.promotionalVideoPathWeb} className="rounded-2xl" autoPlay muted loop></video>
             </div>
           </div>
         </div>
@@ -45,6 +47,7 @@ const Hero: FC<HeroProps> = ({}) => {
           Av. Bolognesi 756, Chiclayo, Perú
           </a>
         </p>
+        <p className="absolute bottom-3 lg:bottom-0 left-0 text-[9px] lg:text-[10px] text-white lowe">"Los juegos de azar realizados constantemente pueden ser dañinos para la salud", Art. 51 de la ley 27153. "Jugar en exceso causa ludopatía" </p>
       </div>
     </section>
   );

@@ -36,7 +36,7 @@ export const useGetProvenance=()=>{
 				setDataToken(valorPro)
 			} else {
 
-				setDataToken(EncryptedCodeProvenance.producction)
+				setDataToken(EncryptedCodeProvenance.development)
 			}
 		}
 		

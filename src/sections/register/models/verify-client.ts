@@ -11,3 +11,9 @@ export interface ClientVerifyResponse{
     displayMessage:     string
     clientExists:       boolean 
 }
+
+
+export interface CampaignVerifyResponse{
+    displayMessage:     string
+    campaniaExists:       boolean 
+}

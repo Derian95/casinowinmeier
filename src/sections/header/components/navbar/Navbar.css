@@ -17,3 +17,7 @@ width: 100%;
 .item-navbar:hover{
     color: #F3B74B;
     }
+    .item-navbar{
+        /* text-shadow: 0 0 5px white; */
+    
+        }
