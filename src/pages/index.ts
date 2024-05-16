@@ -1,2 +1,5 @@
 export * from './Landing'
 export * from './Options'
+export * from './BienvenidoGanar'
+export * from './TycClub'
+export * from './Politicas'

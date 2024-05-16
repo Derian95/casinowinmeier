@@ -1,12 +1,13 @@
 import { FC } from "react";
 import { useCasinoStore } from "../../store/casinoStore";
 import libro from '../../assets/footer/ter.png'
-import { useUiGlobalStore } from "../../store/uiStore";
+// import { useUiGlobalStore } from "../../store/uiStore";
+import { Link } from "react-router-dom";
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   const { dataCasino } = useCasinoStore();
-  const { setModalPolitics, setModalTerms, setModalKeops } =useUiGlobalStore()
+  // const { setModalPolitics, setModalTerms, setModalKeops } =useUiGlobalStore()
   return (
     <footer className="bg-[#1a1a1a] py-20 grid place-items-center">
       <div className="mx-auto children p-4 py-6 lg:py-8">
@@ -27,19 +28,28 @@ const Footer: FC<FooterProps> = ({}) => {
               </h5>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <p className="hover:underline hover:cursor-pointer" onClick={setModalKeops}>
+                <Link  className="hover:underline hover:cursor-pointer" target="_blank" to={'tyc-bienvenido-a-ganar'}>
+                T&C de la promoción "Bienvenido a Ganar"
+                  </Link>
+                  {/* <p className="hover:underline hover:cursor-pointer" onClick={setModalKeops}>
                   T&C de la promoción "Bienvenido a Ganar" 
-                  </p>
+                  </p> */}
                 </li>
                 <li className="mb-4">
-                  <p className="hover:underline hover:cursor-pointer" onClick={setModalTerms}>
+                  <Link  className="hover:underline hover:cursor-pointer" target="_blank" to={'reglamento'}>
                   T&C WM Club
-                  </p>
+                  </Link>
+                  {/* <p className="hover:underline hover:cursor-pointer" onClick={setModalTerms}>
+                  T&C WM Club
+                  </p> */}
                 </li>
                 <li className="mb-4">
-                  <p className="hover:underline hover:cursor-pointer" onClick={setModalPolitics}>
+                <Link  className="hover:underline hover:cursor-pointer" target="_blank" to={'politicas'} >
+                    Políticas de Privacidad WM Club
+                </Link>
+                  {/* <p className="hover:underline hover:cursor-pointer" onClick={setModalPolitics}>
                   Políticas de Privacidad WM Club
-                  </p>
+                  </p> */}
                 </li>
               </ul>
             </div>

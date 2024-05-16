@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "../layout";
-import { Landing, Options } from "../pages";
+import { BienvenidoGanar, Landing, Options, TycClub } from "../pages";
+import Politicas from "../pages/Politicas";
 
 export const route = createBrowserRouter([
   {
@@ -16,5 +17,17 @@ export const route = createBrowserRouter([
   {
     path: "catalogo",
     element: <Options />,
+  },
+  {
+    path: "tyc-bienvenido-a-ganar",
+    element: <BienvenidoGanar />,
+  },
+  {
+    path: "reglamento",
+    element: <TycClub />,
+  },
+  {
+    path: "politicas",
+    element: <Politicas />,
   },
 ]);

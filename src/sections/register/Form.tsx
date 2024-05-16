@@ -12,10 +12,11 @@ import {
 import { ModalSuccess } from ".";
 import { useCasinoStore } from "../../store/casinoStore";
 import "./Register.css";
-import { useUiGlobalStore } from "../../store/uiStore";
+// import { useUiGlobalStore } from "../../store/uiStore";
 import { useCountrys } from "./hooks/useCountrys";
 import Select from "react-select";
 import { useCountryCode } from "./hooks/useCountryCode";
+import { Link } from "react-router-dom";
 
 interface FormRegisterProps {}
 
@@ -38,7 +39,7 @@ export const FormRegister: FC<FormRegisterProps> = () => {
     terms,
     getInstance,
   } = useRegister();
-  const { setModalPolitics } = useUiGlobalStore();
+  // const { setModalPolitics } = useUiGlobalStore();
   const { mappedCountries } = useCountrys();
   const { mappedCountriesCodes } = useCountryCode();
 
@@ -346,12 +347,15 @@ export const FormRegister: FC<FormRegisterProps> = () => {
         />
         <label className="ml-2 text-sm font-medium text-black">
          Tengo más de 18 años, acepto los {" "}
-          <span
+          {/* <span
             className="underline uppercase cursor-pointer text-xs "
             onClick={setModalPolitics}
-          >
+          > */}
+            <Link  className="underline uppercase cursor-pointer text-xs" target="_blank" to={'politicas'} >
             TÉRMINOS & CONDICIONES y las POLÍTICAS DE PRIVACIDAD.
-          </span>
+              
+            </Link>
+          {/* </span> */}
         </label>
       </div>
 
