@@ -3,7 +3,7 @@ export const TycClub = () => {
     return (
       <main className="w-full flex justify-center items-center py-10">
            <article className="max-w-screen-md shadow-xl p-2 md:p-10">
-           <h1 className='flex flex-col gap-1 text-center uppercase text-2xl font-bold mb-6'>
+           <h1 className='flex flex-col gap-1 uppercase text-4xl font-bold mb-2'>
            REGLAMENTO WM CLUB – CASINO WINMEIER
 
            </h1>
