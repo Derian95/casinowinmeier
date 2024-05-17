@@ -5,7 +5,7 @@ import { LinksNavbar } from "../header/models";
 import { Button } from "../../common/components";
 // import imageBg from "../../assets/hero/bg3.webp";
 import imgUrl from '../../assets/hero/newBgWM.svg'
-// import video from '../../assets/hero/video.mp4'
+// import video from '../../assets/hero/Secuencia 01_1.webm'
 interface HeroProps {}
 
 const Hero: FC<HeroProps> = ({}) => {
@@ -38,7 +38,17 @@ const Hero: FC<HeroProps> = ({}) => {
                 alt=""
                 className="w-full h-full object-contain sm:w-8/12 md:w-7/12 lg:w-5/12  xl:w-11/12 "
               /> */}
-              <video src={dataCasino?.generalData.promotionalVideoPathWeb} className="rounded-2xl" autoPlay muted loop></video>
+              {/* <video src={video} className="rounded-2xl" autoPlay muted loop></video> */}
+              <video autoPlay muted loop className="rounded-xl">
+                 <source  src={dataCasino?.generalData.promotionalVideoPathWeb} type="video/webm"/>
+                 <source src={dataCasino?.generalData.promotionalVideoPathWeb} type='video/mp4; codecs="hvc1"' />
+              </video>
+             
+              {/* <video width="600" height="100%" autoPlay loop muted playsInline>
+                <source 
+                  src="https://rotato.netlify.app/alpha-demo/movie-webm.webm" 
+                  type="video/webm"/>
+              </video> */}
             </div>
           </div>
         </div>
