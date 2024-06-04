@@ -3,13 +3,13 @@ export default function Politicas() {
   return (
     <main className="w-full flex justify-center items-center py-10">
     <article className="max-w-screen-md shadow-xl p-2 md:p-10">
-    <h1 className='flex flex-col gap-1 uppercase text-4xl font-bold mb-2'>
+    {/* <h1 className='flex flex-col gap-1 uppercase text-4xl font-bold mb-2'>
     Consentimiento Expreso
 
     </h1>
     <p className="mb-4">El firmante autoriza expresamente la utilización de sus datos personales conforme a los términos de la Política de Privacidad y Tratamiento de Datos Personales, en tanto esta autorización no sea revocada, sus datos personales, que hubieran sido proporcionados directamente o aquellos que pudieran encontrarse en fuentes accesibles para el público; para tratamientos que supongan desarrollo de acciones comerciales (vía medio físico, electrónico o telefónico) personalizadas o generales, autorizándose expresamente la remisión de emails, mensajes de texto, mensajes de whatsapp y/o llamadas telefónicas sobre información publicitaria, promociones, ofertas y/u otras de interés.</p>
       <p className="mb-4">Mediante su aceptación, usted declara haber recibido y/o tenido acceso al REGLAMENTO CLUB, habiendo revisado y aceptado sus políticas de privacidad, términos y condiciones que se detalla a continuación:</p>
-          
+           */}
       <h1 className="text-2xl font-bold mb-4">Términos y Condiciones WM CLUB – CASINO WINMEIER</h1>
       <p>WM CLUB es un programa de beneficios, privilegios y oportunidades para las personas que han optado gratuita y voluntariamente a afiliarse como socios. Nuestro Club de socios se encuentra formado por cuatro categorías o niveles, que se identificarán con distintos colores de tarjetas: Categoría Classic (color anaranjado), Categoría Silver (color gris), Categoría Gold (color dorado) y Categoría Black (color negro).</p>
       <p>Su membresía es válida, después de afiliarse y obtener gratuitamente la tarjeta WM CLUB, la cual será personalizada al habernos proporcionado los datos solicitados en el formulario online<a href="https://casinokeops.pe/#register">https://casinokeops.pe/#register .</a></p>

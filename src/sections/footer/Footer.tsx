@@ -37,7 +37,7 @@ const Footer: FC<FooterProps> = ({}) => {
                 </li>
                 <li className="mb-4">
                   <Link  className="hover:underline hover:cursor-pointer" target="_blank" to={'reglamento'}>
-                  T&C WM Club
+                  Reglamento WM Club
                   </Link>
                   {/* <p className="hover:underline hover:cursor-pointer" onClick={setModalTerms}>
                   T&C WM Club
@@ -45,7 +45,7 @@ const Footer: FC<FooterProps> = ({}) => {
                 </li>
                 <li className="mb-4">
                 <Link  className="hover:underline hover:cursor-pointer" target="_blank" to={'politicas'} >
-                    Políticas de Privacidad WM Club
+                T&C y Políticas de Privacidad WM Club
                 </Link>
                   {/* <p className="hover:underline hover:cursor-pointer" onClick={setModalPolitics}>
                   Políticas de Privacidad WM Club
