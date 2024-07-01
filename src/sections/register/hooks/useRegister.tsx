@@ -122,14 +122,14 @@ export const useRegister = () => {
                 setPostData(false);
               } else {
                 toast.error(
-                  "No procede registro, cliente ya existe en el sistema."
+                  dataIas.displayMessage
                 );
               }
             }
           }
           else{
             toast.error(
-              "No procede registro, cliente ya existe en el sistema"
+              clientVerifyIAS.displayMessage
             );
           }
           setPostData(false);
