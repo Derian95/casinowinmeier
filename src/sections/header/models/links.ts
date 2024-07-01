@@ -7,5 +7,6 @@ export enum LinksNavbar {
     Location = 'location',
     Club='club',
     Hotel ='hotel',
-    Catalogo ='catalogo'
+    Catalogo ='catalogo',
+    Restaurante ='restaurante'
 }

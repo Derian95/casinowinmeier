@@ -22,6 +22,10 @@ export const routesPage =[
         link:LinksNavbar.Catalogo
     },
     {
+        name:'Restaurante',
+        link:LinksNavbar.Restaurante
+    },
+    {
         name:'Promociones',
         link:LinksNavbar.Promotions
     },

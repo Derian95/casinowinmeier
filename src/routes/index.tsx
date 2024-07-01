@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "../layout";
-import { BienvenidoGanar, Landing, Options, TycClub } from "../pages";
+import { BienvenidoGanar, Landing, Options, RestaurantePage, TycClub } from "../pages";
 import Politicas from "../pages/Politicas";
 
 export const route = createBrowserRouter([
@@ -29,5 +29,9 @@ export const route = createBrowserRouter([
   {
     path: "politicas",
     element: <Politicas />,
+  },
+  {
+    path: "restaurante",
+    element: <RestaurantePage />,
   },
 ]);

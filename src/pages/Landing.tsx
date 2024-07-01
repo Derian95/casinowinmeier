@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Club, Events,Hero, Message, Promotions, Register, Services, Social, Map, Hotel} from '../sections';
+import { Club, Events,Hero, Message, Promotions, Register, Services, Social, Map, Hotel, Restaurant} from '../sections';
 import { ModalKeops, ModalPolitics, ModalRegister, ModalTerms, Toast } from '../common/components';
 import BtnClub from '../common/components/BtnClub';
 import { Catalogo } from '../sections/catalogo';
@@ -17,6 +17,7 @@ export const Landing: FC<LandingProps> = ({}) => (
         <Message />
         <Club />
         <Catalogo/>
+        <Restaurant/>
         <Promotions />
         <Events />
         <Register />

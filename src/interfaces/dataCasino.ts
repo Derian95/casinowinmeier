@@ -41,6 +41,8 @@ export interface Sections {
   promotionalAd: PromotionalAd
   footer: Footer
   catalogue: Home
+  restaurant: Home
+  hotel: Home
 }
 
 export interface Home {
